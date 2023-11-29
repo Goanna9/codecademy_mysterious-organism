@@ -66,6 +66,26 @@ const pAequorFactory = (number, array) => {
       } else {
           return false;
       }
+    },
+    complementStrand() {
+      let cStrand = [];
+      for (i = 0; i < this.dna.length; i++) {
+        switch (this.dna[i]) {
+          case 'A':
+            cStrand.push('T');
+            break;
+          case 'T':
+            cStrand.push('A');
+            break;
+          case 'C':
+            cStrand.push('G');
+            break;
+          case 'G':
+            cStrand.push('C');
+            break;
+        }
+      }
+      return `The complementary DNA strand for this specimen is: ${cStrand}`;
     }
   }
 }
@@ -104,3 +124,7 @@ for (i = 0; i < 30; i++) {
   AlienArray.push(pAequorFactory(i, mockUpStrand(returnRandBase)));
 }
 console.log(AlienArray);
+
+console.log(specimenNumsArray);
+
+console.log(AlienOne.complementStrand());
