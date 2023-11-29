@@ -101,6 +101,6 @@ console.log(specimenNumsArray);
 
 let AlienArray = [];
 for (i = 0; i < 30; i++) {
-  AlienArray.push(pAequorFactory([i], mockUpStrand(returnRandBase)));
+  AlienArray.push(pAequorFactory(i, mockUpStrand(returnRandBase)));
 }
 console.log(AlienArray);
