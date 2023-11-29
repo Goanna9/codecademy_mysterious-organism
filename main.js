@@ -67,6 +67,7 @@ const pAequorFactory = (number, array) => {
           return false;
       }
     },
+    // Complementary DNA strand
     complementStrand() {
       let cStrand = [];
       for (i = 0; i < this.dna.length; i++) {
